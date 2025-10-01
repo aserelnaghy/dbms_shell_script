@@ -14,7 +14,7 @@ while true; do
     case $choice in
         1) read -p "Enter database name: " db; mkdir "$DB_ROOT/$db" || echo "Already exists";;
         2) ls "$DB_ROOT" || echo "No databases found";;
-        3) read -p "Enter database name to connect: " db; [ -d "DB_ROOT/$db" ] && ./table_menu.sh "$DB_ROOT/$db" || echo "Database not found";;
+        3) ls "$DB_ROOT"; read -p "Enter database name to connect: " db; [ -d "DB_ROOT/$db" ] && ./table_menu.sh "$DB_ROOT/$db" || echo "Database not found";;
         4) read -p "Enter database name to delete: " db; rm -r "$DB_ROOT/$db" || echo "Database not found";;
         5) exit;;
         *) echo "Invalid option";;
