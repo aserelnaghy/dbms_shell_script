@@ -15,9 +15,9 @@ while true; do
 
     case $choice in
         1) ./create_table.sh "$DB_PATH";;
-        2) ls "DB_PATH";;
-        3) ls "DB_PATH"; read -p "Enter table name to remove: " tbl; rm "$DB_PATH/$tbl";;
-        4) ./inser.sh "$DB_PATH";;
+        2) ls "$DB_PATH";;
+        3) ls "$DB_PATH"; read -p "Enter table name to remove: " tbl; rm "$DB_PATH/$tbl";;
+        4) ./insert.sh "$DB_PATH";;
         5) ./select.sh "$DB_PATH";;
         6) ./delete.sh "$DB_PATH";;
         7) ./update.sh "$DB_PATH";;
